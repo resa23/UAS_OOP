@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bonus Level.cs">
+    <Compile Include="Mahasiswa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bonus Level.Designer.cs">
-      <DependentUpon>Bonus Level.cs</DependentUpon>
+    <Compile Include="Mahasiswa.Designer.cs">
+      <DependentUpon>Mahasiswa.cs</DependentUpon>
     </Compile>
     <Compile Include="Daftar ulang Mahasiswa.cs">
       <SubType>Form</SubType>
@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Update daftar ulang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update daftar ulang.Designer.cs">
+      <DependentUpon>Update daftar ulang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update Mhs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="Update Prodi.Designer.cs">
       <DependentUpon>Update Prodi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Daftar ulang mhs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Daftar ulang mhs.Designer.cs">
+      <DependentUpon>View Daftar ulang mhs.cs</DependentUpon>
     </Compile>
     <Compile Include="View Mhs.cs">
       <SubType>Form</SubType>
@@ -96,8 +108,8 @@
     <Compile Include="View Prodi.Designer.cs">
       <DependentUpon>View Prodi.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Bonus Level.resx">
-      <DependentUpon>Bonus Level.cs</DependentUpon>
+    <EmbeddedResource Include="Mahasiswa.resx">
+      <DependentUpon>Mahasiswa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Daftar ulang Mahasiswa.resx">
       <DependentUpon>Daftar ulang Mahasiswa.cs</DependentUpon>
@@ -117,11 +129,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Update daftar ulang.resx">
+      <DependentUpon>Update daftar ulang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Update Mhs.resx">
       <DependentUpon>Update Mhs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update Prodi.resx">
       <DependentUpon>Update Prodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Daftar ulang mhs.resx">
+      <DependentUpon>View Daftar ulang mhs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Mhs.resx">
       <DependentUpon>View Mhs.cs</DependentUpon>

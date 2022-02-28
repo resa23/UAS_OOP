@@ -1,8 +1,6 @@
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\bin\Debug\UAS_OOP_1204053.exe.config
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\bin\Debug\UAS_OOP_1204053.exe
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\bin\Debug\UAS_OOP_1204053.pdb
-c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.csprojResolveAssemblyReference.cache
-c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Bonus_Level.resources
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Home.resources
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Program_Studi.resources
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Properties.Resources.resources
@@ -14,3 +12,6 @@ c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Update_Prodi.resources
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.View_Mhs.resources
 c:\users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.View_Prodi.resources
+C:\Users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Mahasiswa.resources
+C:\Users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.Update_daftar_ulang.resources
+C:\Users\laresa rianti\onedrive\dokumen\visual studio 2015\Projects\UAS_OOP_1204053\UAS_OOP_1204053\obj\Debug\UAS_OOP_1204053.View_Daftar_ulang_mhs.resources

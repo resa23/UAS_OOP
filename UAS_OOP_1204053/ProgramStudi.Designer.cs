@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Program_Studi));
             this.label1 = new System.Windows.Forms.Label();
             this.KodeProdi = new System.Windows.Forms.Label();
             this.txtKode = new System.Windows.Forms.TextBox();
@@ -41,21 +39,15 @@
             this.txtBiaya = new System.Windows.Forms.TextBox();
             this.Btsubmit = new System.Windows.Forms.Button();
             this.BtClear = new System.Windows.Forms.Button();
-            this.epCorrect = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epWarning = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epWrong = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.epCorrect)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epWarning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epWrong)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(185, 60);
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(206, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 26);
+            this.label1.Size = new System.Drawing.Size(226, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Input Program Studi";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -72,9 +64,10 @@
             // 
             // txtKode
             // 
+            this.txtKode.BackColor = System.Drawing.SystemColors.Window;
             this.txtKode.Location = new System.Drawing.Point(256, 144);
             this.txtKode.Name = "txtKode";
-            this.txtKode.Size = new System.Drawing.Size(239, 26);
+            this.txtKode.Size = new System.Drawing.Size(266, 26);
             this.txtKode.TabIndex = 2;
             // 
             // NamaProdi
@@ -91,7 +84,7 @@
             // 
             this.txtNama.Location = new System.Drawing.Point(256, 188);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(239, 26);
+            this.txtNama.Size = new System.Drawing.Size(266, 26);
             this.txtNama.TabIndex = 4;
             // 
             // Singkatan
@@ -108,7 +101,7 @@
             // 
             this.txtSingkatan.Location = new System.Drawing.Point(256, 235);
             this.txtSingkatan.Name = "txtSingkatan";
-            this.txtSingkatan.Size = new System.Drawing.Size(238, 26);
+            this.txtSingkatan.Size = new System.Drawing.Size(266, 26);
             this.txtSingkatan.TabIndex = 6;
             // 
             // Biaya
@@ -125,8 +118,9 @@
             // 
             this.txtBiaya.Location = new System.Drawing.Point(256, 286);
             this.txtBiaya.Name = "txtBiaya";
-            this.txtBiaya.Size = new System.Drawing.Size(239, 26);
+            this.txtBiaya.Size = new System.Drawing.Size(266, 26);
             this.txtBiaya.TabIndex = 8;
+            this.txtBiaya.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBiaya_KeyPress);
             this.txtBiaya.Leave += new System.EventHandler(this.txtBiaya_Leave);
             // 
             // Btsubmit
@@ -141,7 +135,7 @@
             // 
             // BtClear
             // 
-            this.BtClear.Location = new System.Drawing.Point(324, 370);
+            this.BtClear.Location = new System.Drawing.Point(383, 369);
             this.BtClear.Name = "BtClear";
             this.BtClear.Size = new System.Drawing.Size(108, 32);
             this.BtClear.TabIndex = 10;
@@ -149,26 +143,11 @@
             this.BtClear.UseVisualStyleBackColor = true;
             this.BtClear.Click += new System.EventHandler(this.BtClear_Click);
             // 
-            // epCorrect
-            // 
-            this.epCorrect.ContainerControl = this;
-            this.epCorrect.Icon = ((System.Drawing.Icon)(resources.GetObject("epCorrect.Icon")));
-            // 
-            // epWarning
-            // 
-            this.epWarning.ContainerControl = this;
-            this.epWarning.Icon = ((System.Drawing.Icon)(resources.GetObject("epWarning.Icon")));
-            // 
-            // epWrong
-            // 
-            this.epWrong.ContainerControl = this;
-            this.epWrong.Icon = ((System.Drawing.Icon)(resources.GetObject("epWrong.Icon")));
-            // 
             // Program_Studi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 434);
+            this.ClientSize = new System.Drawing.Size(628, 484);
             this.Controls.Add(this.BtClear);
             this.Controls.Add(this.Btsubmit);
             this.Controls.Add(this.txtBiaya);
@@ -182,9 +161,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Program_Studi";
             this.Text = "Program_Studi";
-            ((System.ComponentModel.ISupportInitialize)(this.epCorrect)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epWarning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epWrong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,8 +179,5 @@
         private System.Windows.Forms.TextBox txtBiaya;
         private System.Windows.Forms.Button Btsubmit;
         private System.Windows.Forms.Button BtClear;
-        private System.Windows.Forms.ErrorProvider epCorrect;
-        private System.Windows.Forms.ErrorProvider epWarning;
-        private System.Windows.Forms.ErrorProvider epWrong;
     }
 }

@@ -9,25 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
 namespace UAS_OOP_1204053
 {
-    public partial class Update_Mhs : Form
+    public partial class Update_daftar_ulang : Form
     {
-        public Update_Mhs()
+        public Update_daftar_ulang()
         {
             InitializeComponent();
         }
-
-        // deklarasi variabel dsMhs dengan tipe dataset
-        private DataSet dsMhs;
-        public DataSet CreateMhsDataSet()
+       
+        private DataSet dsDaftar;
+        public DataSet CreateDaftarDataSet()
         {
             DataSet myDataSet = new DataSet();
 
             try
             {
-                //string myConnectionString = "integrated security=true;data source=.;initial catalog=LAPTOP-PH1JF1U0\BELAJARIT\UAS";
 
                 SqlConnection myConnection = new SqlConnection(@"Data Source=LAPTOP-PH1JF1U0\BELAJARIT; Initial Catalog=UAS;Integrated Security=True");
 
@@ -35,13 +32,13 @@ namespace UAS_OOP_1204053
 
                 myCommand.Connection = myConnection;
 
-                myCommand.CommandText = "SELECT * FROM ms_mhs";
+                myCommand.CommandText = "SELECT * FROM tr_daftar_ulang";
                 myCommand.CommandType = CommandType.Text;
 
                 SqlDataAdapter myDataAdapter = new SqlDataAdapter();
 
                 myDataAdapter.SelectCommand = myCommand;
-                myDataAdapter.TableMappings.Add("Table", "Mahasiswa");
+                myDataAdapter.TableMappings.Add("Table", "Grade");
 
                 myDataAdapter.Fill(myDataSet);
 
@@ -55,9 +52,9 @@ namespace UAS_OOP_1204053
         }
         private void RefreshDataset()
         {
-            dsMhs = CreateMhsDataSet();
+            dsDaftar = CreateDaftarDataSet();
 
-            dgMhs.DataSource = dsMhs.Tables["Mahasiswa"];
+            dgDU.DataSource = dsDaftar.Tables["Grade"];
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
@@ -68,7 +65,7 @@ namespace UAS_OOP_1204053
 
             myConnection.Open();
 
-            SqlDataAdapter myAdapter = new SqlDataAdapter("select * from ms_mhs", myConnection);
+            SqlDataAdapter myAdapter = new SqlDataAdapter("select * from tr_daftar_ulang", myConnection);
             SqlCommandBuilder myCmdBuilder = new SqlCommandBuilder(myAdapter);
 
             myAdapter.InsertCommand = myCmdBuilder.GetInsertCommand();
@@ -84,11 +81,11 @@ namespace UAS_OOP_1204053
 
             try
             {
-                int rowsUpdated = myAdapter.Update(dsMhs, "Mahasiswa");
+                int rowsUpdated = myAdapter.Update(dsDaftar, "Grade");
 
                 myTransaction.Commit();
 
-                MessageBox.Show(rowsUpdated.ToString() + " baris diperbarui", "informasi",
+                MessageBox.Show(rowsUpdated.ToString() + " Data baru berhasil diperbarui", "informasi",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 RefreshDataset();
@@ -103,14 +100,9 @@ namespace UAS_OOP_1204053
             MessageBox.Show(myAdapter.DeleteCommand.CommandText);
         }
 
-        private void btRefresh_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             RefreshDataset();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

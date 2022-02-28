@@ -36,7 +36,7 @@
             this.txtNama = new System.Windows.Forms.TextBox();
             this.txtProdi = new System.Windows.Forms.TextBox();
             this.lbBiaya = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbBiaya = new System.Windows.Forms.TextBox();
             this.lbGrade = new System.Windows.Forms.Label();
             this.rbGradeA = new System.Windows.Forms.RadioButton();
             this.rbGradeB = new System.Windows.Forms.RadioButton();
@@ -52,8 +52,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 70);
+            this.label1.Location = new System.Drawing.Point(175, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 25);
             this.label1.TabIndex = 0;
@@ -93,6 +94,7 @@
             this.txtNPM.Size = new System.Drawing.Size(237, 26);
             this.txtNPM.TabIndex = 4;
             this.txtNPM.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNPM.Leave += new System.EventHandler(this.txtNPM_Leave);
             // 
             // txtNama
             // 
@@ -117,12 +119,12 @@
             this.lbBiaya.TabIndex = 7;
             this.lbBiaya.Text = "Biaya Kuliah                        :";
             // 
-            // textBox1
+            // tbBiaya
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 262);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 26);
-            this.textBox1.TabIndex = 8;
+            this.tbBiaya.Location = new System.Drawing.Point(274, 262);
+            this.tbBiaya.Name = "tbBiaya";
+            this.tbBiaya.Size = new System.Drawing.Size(235, 26);
+            this.tbBiaya.TabIndex = 8;
             // 
             // lbGrade
             // 
@@ -155,6 +157,7 @@
             this.rbGradeB.TabStop = true;
             this.rbGradeB.Text = "B";
             this.rbGradeB.UseVisualStyleBackColor = true;
+            this.rbGradeB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbGradeB_MouseClick);
             // 
             // rbGradeC
             // 
@@ -166,6 +169,7 @@
             this.rbGradeC.TabStop = true;
             this.rbGradeC.Text = "C";
             this.rbGradeC.UseVisualStyleBackColor = true;
+            this.rbGradeC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbGradeC_MouseClick);
             // 
             // label4
             // 
@@ -194,33 +198,40 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(276, 495);
+            this.txtTotal.Location = new System.Drawing.Point(274, 498);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(229, 26);
             this.txtTotal.TabIndex = 16;
+            this.txtTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotal_KeyPress);
             // 
             // btSubmit
             // 
+            this.btSubmit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btSubmit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btSubmit.Location = new System.Drawing.Point(157, 576);
             this.btSubmit.Name = "btSubmit";
             this.btSubmit.Size = new System.Drawing.Size(106, 39);
             this.btSubmit.TabIndex = 17;
             this.btSubmit.Text = "Submit";
-            this.btSubmit.UseVisualStyleBackColor = true;
+            this.btSubmit.UseVisualStyleBackColor = false;
+            this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
+            this.btSubmit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btSubmit_MouseClick);
             // 
             // btClear
             // 
+            this.btClear.BackColor = System.Drawing.SystemColors.Info;
             this.btClear.Location = new System.Drawing.Point(336, 573);
             this.btClear.Name = "btClear";
             this.btClear.Size = new System.Drawing.Size(103, 44);
             this.btClear.TabIndex = 18;
             this.btClear.Text = "Clear";
-            this.btClear.UseVisualStyleBackColor = true;
+            this.btClear.UseVisualStyleBackColor = false;
             // 
             // Daftar_ulang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(641, 679);
             this.Controls.Add(this.btClear);
             this.Controls.Add(this.btSubmit);
@@ -232,7 +243,7 @@
             this.Controls.Add(this.rbGradeB);
             this.Controls.Add(this.rbGradeA);
             this.Controls.Add(this.lbGrade);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbBiaya);
             this.Controls.Add(this.lbBiaya);
             this.Controls.Add(this.txtProdi);
             this.Controls.Add(this.txtNama);
@@ -242,7 +253,7 @@
             this.Controls.Add(this.lbNpm);
             this.Controls.Add(this.label1);
             this.Name = "Daftar_ulang";
-            this.Text = "Daftar_ulang_Mahasiswa";
+            this.Text = "Daftar Ulang Mahasiswa";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +269,7 @@
         private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.TextBox txtProdi;
         private System.Windows.Forms.Label lbBiaya;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbBiaya;
         private System.Windows.Forms.Label lbGrade;
         private System.Windows.Forms.RadioButton rbGradeA;
         private System.Windows.Forms.RadioButton rbGradeB;

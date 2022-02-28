@@ -32,16 +32,14 @@ namespace UAS_OOP_1204053
 
         private void mahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bonus_Level newChild = new Bonus_Level();
+            Mahasiswa newChild = new Mahasiswa();
             newChild.MdiParent = this;
             newChild.Show();
         }
 
         private void transaksiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Daftar_ulang newChild = new Daftar_ulang();
-            newChild.MdiParent = this;
-            newChild.Show();
+           
         }
 
         private void mahasiswaToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -68,6 +66,20 @@ namespace UAS_OOP_1204053
         private void prodiToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             Update_Prodi newChild = new Update_Prodi();
+            newChild.MdiParent = this;
+            newChild.Show();
+        }
+
+        private void daftarUlangMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Daftar_ulang newChild = new Daftar_ulang();
+            newChild.MdiParent = this;
+            newChild.Show();
+        }
+
+        private void daftarUlangMahasiswaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            View_Daftar_ulang_mhs newChild = new View_Daftar_ulang_mhs();
             newChild.MdiParent = this;
             newChild.Show();
         }

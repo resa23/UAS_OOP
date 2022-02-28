@@ -1,6 +1,6 @@
 ﻿namespace UAS_OOP_1204053
 {
-    partial class Bonus_Level
+    partial class Mahasiswa
     {
         /// <summary>
         /// Required designer variable.
@@ -45,10 +45,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(184, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 22);
+            this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Input Mahasiswa";
             // 
@@ -66,7 +66,7 @@
             // 
             this.txtNPM.Location = new System.Drawing.Point(230, 119);
             this.txtNPM.Name = "txtNPM";
-            this.txtNPM.Size = new System.Drawing.Size(248, 26);
+            this.txtNPM.Size = new System.Drawing.Size(291, 26);
             this.txtNPM.TabIndex = 2;
             // 
             // NamaMhs
@@ -82,7 +82,7 @@
             // 
             this.txtNama.Location = new System.Drawing.Point(229, 162);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(249, 26);
+            this.txtNama.Size = new System.Drawing.Size(292, 26);
             this.txtNama.TabIndex = 4;
             // 
             // lbProdi
@@ -97,22 +97,15 @@
             // cbProdi
             // 
             this.cbProdi.FormattingEnabled = true;
-            this.cbProdi.Items.AddRange(new object[] {
-            "PRD01 ",
-            "PRD02",
-            "PRD03",
-            "PRD04",
-            "PRD05",
-            "PRD06"});
             this.cbProdi.Location = new System.Drawing.Point(229, 215);
             this.cbProdi.Name = "cbProdi";
             this.cbProdi.Size = new System.Drawing.Size(249, 28);
             this.cbProdi.TabIndex = 6;
-            this.cbProdi.Text = "---Pilih Kode program Studi---";
+            this.cbProdi.Text = "---------Pilih program Studi------";
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(124, 300);
+            this.buttonSubmit.Location = new System.Drawing.Point(148, 302);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(99, 31);
             this.buttonSubmit.TabIndex = 7;
@@ -122,7 +115,7 @@
             // 
             // btClear
             // 
-            this.btClear.Location = new System.Drawing.Point(305, 298);
+            this.btClear.Location = new System.Drawing.Point(325, 300);
             this.btClear.Name = "btClear";
             this.btClear.Size = new System.Drawing.Size(100, 35);
             this.btClear.TabIndex = 8;
@@ -134,11 +127,11 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // Bonus_Level
+            // Mahasiswa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 434);
+            this.ClientSize = new System.Drawing.Size(578, 444);
             this.Controls.Add(this.btClear);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.cbProdi);
@@ -148,8 +141,8 @@
             this.Controls.Add(this.txtNPM);
             this.Controls.Add(this.Npm);
             this.Controls.Add(this.label1);
-            this.Name = "Bonus_Level";
-            this.Text = "Bonus_Level";
+            this.Name = "Mahasiswa";
+            this.Text = "Mahasiswa";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
