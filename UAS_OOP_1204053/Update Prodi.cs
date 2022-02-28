@@ -100,5 +100,10 @@ namespace UAS_OOP_1204053
             MessageBox.Show(myAdapter.UpdateCommand.CommandText);
             MessageBox.Show(myAdapter.DeleteCommand.CommandText);
         }
+
+        private void btRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshDataset();
+        }
     }
  }

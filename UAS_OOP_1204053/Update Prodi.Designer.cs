@@ -31,6 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgProdi = new System.Windows.Forms.DataGridView();
             this.btUpdate = new System.Windows.Forms.Button();
+            this.btRefresh = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgProdi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,19 +57,43 @@
             // 
             // btUpdate
             // 
-            this.btUpdate.Location = new System.Drawing.Point(292, 482);
+            this.btUpdate.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btUpdate.Location = new System.Drawing.Point(153, 478);
             this.btUpdate.Name = "btUpdate";
             this.btUpdate.Size = new System.Drawing.Size(153, 43);
             this.btUpdate.TabIndex = 2;
             this.btUpdate.Text = "Update";
-            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.UseVisualStyleBackColor = false;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
+            // 
+            // btRefresh
+            // 
+            this.btRefresh.BackColor = System.Drawing.SystemColors.Info;
+            this.btRefresh.Location = new System.Drawing.Point(410, 478);
+            this.btRefresh.Name = "btRefresh";
+            this.btRefresh.Size = new System.Drawing.Size(162, 43);
+            this.btRefresh.TabIndex = 3;
+            this.btRefresh.Text = "Refresh";
+            this.btRefresh.UseVisualStyleBackColor = false;
+            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 553);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(337, 80);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Note : \r\n\r\nUntuk menghapus data anda dapat klik kolom \r\nsebelah kiri lalu tekan \"" +
+    "delete\" di keyboard .";
             // 
             // Update_Prodi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 589);
+            this.ClientSize = new System.Drawing.Size(732, 643);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btRefresh);
             this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.dgProdi);
             this.Controls.Add(this.label1);
@@ -84,5 +110,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgProdi;
         private System.Windows.Forms.Button btUpdate;
+        private System.Windows.Forms.Button btRefresh;
+        private System.Windows.Forms.Label label2;
     }
 }
